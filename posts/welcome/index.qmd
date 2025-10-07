@@ -1,12 +1,47 @@
 ---
-title: "Welcome To My Blog Template"
-author: "Emi Tanaka"
-date: "2022-07-18"
+title: "Can Cheaper Sensors Save Our Rivers?"
+author: "Sia Chawla"
+date: "2025-10-07"
 categories: [news]
 ---
 
-This is the first post in a Quarto blog. Welcome!
+## Too Much Nitrate, Too Little Data
 
-![](thumbnail.jpg)
+Nitrate might not make the news every day, but it’s a quiet troublemaker in our rivers. Too much of it fuels algal blooms, robs the water of oxygen, and puts fish and other aquatic life at risk. The frustrating part? We know nitrate matters, yet it’s the one thing we rarely measure well.  
+
+Why? Because the sensors that can track nitrate directly are pricey, fussy, and hard to maintain across large monitoring networks. In contrast, cheaper gadgets already sit in rivers everywhere, quietly recording things like temperature, oxygen, and turbidity, but they leave nitrate out of the story.  
+
+So here’s the puzzle: **Can we use the data we already have to “guess” nitrate levels and still keep rivers safe?** If the answer is yes, water managers could save money *and* still keep pollution in check.  
+
+
+## Digging Into the Data
+
+
+To find out if cheap sensors could really help track nitrate, researchers looked at three very different rivers: the Arikaree River in Colorado’s dry plains, the icy Caribou-Poker Creeks in Alaska, and the more urban-agricultural Lewis Run in Virginia. At each site, nitrate was measured every 15 minutes using high-grade equipment. Alongside that, common variables like water temperature, dissolved oxygen, turbidity, and specific conductance were measured more frequently, then matched to the nitrate data.  
+
+The trick was in the modelling. Instead of relying on one simple equation, the team used a generalised additive mixed model (GAMM). This method can capture wavy, nonlinear relationships between variables, and the ARIMA correction on top accounted for the natural daily and seasonal cycles that appear in rivers. In plain terms: the model learned both the “shape” of the data and the rhythms of the stream.  
+
+And it worked almost unbelievably well. Across all three rivers, the models explained about **99% of the variation in nitrate levels**. But the story wasn’t the same everywhere. In Virginia’s Lewis Run, conductivity was the star predictor. In Alaska, conductivity mattered too, while turbidity turned out to be almost useless. And in Colorado’s Arikaree River, the real driver wasn’t a single sensor at all, it was the biological daily cycles, picked up by the ARIMA time-series component.  
+
+::: {#fig-gamm}
+![](images/gamm-vs-gam.png){fig-alt="Model performance across sites, comparing GAM vs GAMM"}  
+*Figure 1: Adding an ARIMA component (GAMM) improved model fit across all sites compared to a plain GAM.*  
+:::
+
+A quick look at [Figure 1](#fig-gamm) shows why this matters. When the models didn’t account for autocorrelation, they struggled. But once the ARIMA correction was added, performance jumped significantly, picking up on the hidden cycles that drive nitrate changes.  
+
+::: {#tbl-importance}
+| Stream              | Dominant predictor     | Key insight                          |
+|---------------------|------------------------|--------------------------------------|
+| Lewis Run (VA)      | Specific conductance   | Strongest driver of nitrate shifts   |
+| Caribou-Poker (AK)  | Specific conductance   | Turbidity was weakest contributor    |
+| Arikaree (CO)       | Cyclical (ARIMA)       | Daily uptake and release patterns    |
+:::
+
+Table [1](#tbl-importance) highlights that the “most important” predictor changes from site to site, which means a one-size-fits-all model won’t work.  
+
+In short, nitrate can be explained using cheap, widely available sensors, but only if the model is tuned to the site. There’s no silver bullet, but there’s a clear framework: smart modelling plus the data we already have.  
+
+
 
 

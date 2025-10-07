@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Emi Tanaka">
-<meta name="dcterms.date" content="2022-07-18">
+<meta name="author" content="Sia Chawla">
+<meta name="dcterms.date" content="2025-10-07">
 
-<title>Welcome To My Blog Template – Sia Chawla</title>
+<title>Can Cheaper Sensors Save Our Rivers? – Sia Chawla</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6d2ba18429fa2e14b79d94aa8bc37231.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog Template</h1>
+      <h1 class="title">Can Cheaper Sensors Save Our Rivers?</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">news</div>
               </div>
@@ -123,14 +123,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Author</div>
       <div class="quarto-title-meta-contents">
-               <p>Emi Tanaka </p>
+               <p>Sia Chawla </p>
             </div>
     </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">July 18, 2022</p>
+        <p class="date">October 7, 2025</p>
       </div>
     </div>
     
@@ -149,10 +149,66 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><img src="thumbnail.jpg" class="img-fluid"></p>
+<section id="too-much-nitrate-too-little-data" class="level2">
+<h2 class="anchored" data-anchor-id="too-much-nitrate-too-little-data">Too Much Nitrate, Too Little Data</h2>
+<p>Nitrate might not make the news every day, but it’s a quiet troublemaker in our rivers. Too much of it fuels algal blooms, robs the water of oxygen, and puts fish and other aquatic life at risk. The frustrating part? We know nitrate matters, yet it’s the one thing we rarely measure well.</p>
+<p>Why? Because the sensors that can track nitrate directly are pricey, fussy, and hard to maintain across large monitoring networks. In contrast, cheaper gadgets already sit in rivers everywhere, quietly recording things like temperature, oxygen, and turbidity, but they leave nitrate out of the story.</p>
+<p>So here’s the puzzle: <strong>Can we use the data we already have to “guess” nitrate levels and still keep rivers safe?</strong> If the answer is yes, water managers could save money <em>and</em> still keep pollution in check.</p>
+</section>
+<section id="digging-into-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="digging-into-the-data">Digging Into the Data</h2>
+<p>To find out if cheap sensors could really help track nitrate, researchers looked at three very different rivers: the Arikaree River in Colorado’s dry plains, the icy Caribou-Poker Creeks in Alaska, and the more urban-agricultural Lewis Run in Virginia. At each site, nitrate was measured every 15 minutes using high-grade equipment. Alongside that, common variables like water temperature, dissolved oxygen, turbidity, and specific conductance were measured more frequently, then matched to the nitrate data.</p>
+<p>The trick was in the modelling. Instead of relying on one simple equation, the team used a generalised additive mixed model (GAMM). This method can capture wavy, nonlinear relationships between variables, and the ARIMA correction on top accounted for the natural daily and seasonal cycles that appear in rivers. In plain terms: the model learned both the “shape” of the data and the rhythms of the stream.</p>
+<p>And it worked almost unbelievably well. Across all three rivers, the models explained about <strong>99% of the variation in nitrate levels</strong>. But the story wasn’t the same everywhere. In Virginia’s Lewis Run, conductivity was the star predictor. In Alaska, conductivity mattered too, while turbidity turned out to be almost useless. And in Colorado’s Arikaree River, the real driver wasn’t a single sensor at all, it was the biological daily cycles, picked up by the ARIMA time-series component.</p>
+<div id="fig-gamm" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Model performance across sites, comparing GAM vs GAMM">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gamm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/gamm-vs-gam.png" class="img-fluid figure-img" alt="Model performance across sites, comparing GAM vs GAMM">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gamm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+<p>A quick look at <a href="#fig-gamm">Figure 1</a> shows why this matters. When the models didn’t account for autocorrelation, they struggled. But once the ARIMA correction was added, performance jumped significantly, picking up on the hidden cycles that drive nitrate changes.</p>
+<div id="tbl-importance" class="anchored">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 28%">
+<col style="width: 45%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Stream</th>
+<th>Dominant predictor</th>
+<th>Key insight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Lewis Run (VA)</td>
+<td>Specific conductance</td>
+<td>Strongest driver of nitrate shifts</td>
+</tr>
+<tr class="even">
+<td>Caribou-Poker (AK)</td>
+<td>Specific conductance</td>
+<td>Turbidity was weakest contributor</td>
+</tr>
+<tr class="odd">
+<td>Arikaree (CO)</td>
+<td>Cyclical (ARIMA)</td>
+<td>Daily uptake and release patterns</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Table <a href="#tbl-importance">1</a> highlights that the “most important” predictor changes from site to site, which means a one-size-fits-all model won’t work.</p>
+<p>In short, nitrate can be explained using cheap, widely available sensors, but only if the model is tuned to the site. There’s no silver bullet, but there’s a clear framework: smart modelling plus the data we already have.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

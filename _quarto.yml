@@ -10,7 +10,7 @@ website:
         href: https://github.com/siachawla16
 format:
   html:
-    theme: morph
+    theme: flatly
     css: styles.css
 
 
