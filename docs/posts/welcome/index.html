@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Sia Chawla">
+<meta name="dcterms.date" content="2025-10-07">
 
-<title>ETC5523 Blog Assessment – Sia Chawla</title>
+<title>Can Cheaper Sensors Save Our Rivers? – Sia Chawla</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +22,45 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f3c2ea88cadbcfb37ba28ffa2c97cfc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +88,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Sia Chawla</span>
     </a>
   </div>
@@ -149,7 +111,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item compact">
@@ -167,77 +129,105 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">ETC5523 Blog Assessment</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Can Cheaper Sensors Save Our Rivers?</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Sia Chawla </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 7, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<section id="too-much-nitrate-too-little-data" class="level2">
+<h2 class="anchored" data-anchor-id="too-much-nitrate-too-little-data">Too Much Nitrate, Too Little Data</h2>
+<p>Nitrate might not make the news every day, but it’s a quiet troublemaker in our rivers. Too much of it fuels algal blooms, robs the water of oxygen, and puts fish and other aquatic life at risk. The frustrating part? We know nitrate matters, yet it’s the one thing we rarely measure well.</p>
+<p>Why? Because the sensors that can track nitrate directly are pricey, fussy, and hard to maintain across large monitoring networks. In contrast, cheaper gadgets already sit in rivers everywhere, quietly recording things like temperature, oxygen, and turbidity, but they leave nitrate out of the story.</p>
+<p>So here’s the puzzle: <strong>Can we use the data we already have to “guess” nitrate levels and still keep rivers safe?</strong> If the answer is yes, water managers could save money <em>and</em> still keep pollution in check.</p>
+</section>
+<section id="digging-into-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="digging-into-the-data">Digging Into the Data</h2>
+<p>To explore whether inexpensive, readily available sensors could track river nitrate levels, researchers used publicly available data from the <strong>National Ecological Observatory Network (NEON)</strong>, as analysed by Kermorvant et al. <span class="citation" data-cites="kermorvant2023">(<a href="#ref-kermorvant2023" role="doc-biblioref">Kermorvant et al., 2023</a>)</span>. The study focused on three contrasting river systems: the <strong>Arikaree River</strong> in Colorado’s dry plains, the <strong>Caribou-Poker Creeks</strong> in Alaska’s subarctic wilderness, and <strong>Lewis Run</strong> in Virginia’s temperate, partly urban landscape.</p>
+<p>At each site, nitrate concentrations were recorded every 15 minutes using high-grade sensors, while supporting variables such as water temperature, dissolved oxygen, turbidity, and specific conductance were collected even more frequently and synchronised to match the nitrate data.</p>
+<p>Instead of relying on a simple regression, the team applied a <strong>Generalised Additive Mixed Model (GAMM)</strong>, enhanced with an <strong>ARIMA correction</strong> to account for daily and seasonal autocorrelation. In everyday terms, the model learned both the “shape” of the data and the natural rhythms of the rivers.</p>
+<p>And the results were striking. Across all three rivers, the model explained about <strong>99% of the variation</strong> in nitrate levels. Yet, the key drivers differed by site. In <strong>Lewis Run</strong>, specific conductance dominated. In <strong>Caribou-Poker Creeks</strong>, conductance mattered too, though turbidity was almost irrelevant. For the <strong>Arikaree River</strong>, no single sensor told the full story; the biological and diel cycles captured by the ARIMA component carried most of the signal.</p>
+<div id="fig-importance" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Variable importance across NEON sites">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-importance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figure.png" class="img-fluid figure-img" alt="Variable importance across NEON sites">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-importance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+<p>As seen in <a href="#fig-importance">Figure 1</a>, each river reveals a different fingerprint of nitrate behaviour, proof that there’s no universal predictor.</p>
+<p>To test how much modelling technique mattered, the researchers compared traditional GAMs with the more advanced GAMMs.</p>
+<div id="fig-gamm" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Model comparison between GAM and GAMM across sites">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gamm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="table.png" class="img-fluid figure-img" alt="Model comparison between GAM and GAMM across sites">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-gamm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
+</figure>
+</div>
+<p>A glance at <a href="#fig-gamm">Figure 2</a> shows why this step was essential. When temporal autocorrelation was ignored, performance suffered. With the ARIMA correction in place, accuracy jumped, capturing the hidden biological and hydrological cycles driving nitrate changes.</p>
+<p>Together, the visuals tell a clear story: while cheap sensors can indeed reveal nitrate dynamics with impressive precision, the signals that matter most vary from site to site. There is no one-size-fits-all solution, but there is a reliable framework: <strong>combine accessible sensor data with smart, adaptive modelling.</strong> That’s how cheaper sensors can, quite literally, help save our rivers.</p>
+</section>
+<section id="flowing-forward" class="level2">
+<h2 class="anchored" data-anchor-id="flowing-forward">Flowing Forward</h2>
+<p>So, can cheaper sensors really save our rivers? The evidence says maybe not alone, but they sure can help. When paired with smart modelling tools, even low-cost sensors can uncover powerful stories hidden in the data. As seen in <a href="#fig-importance">Figure 1</a>, patterns in temperature, turbidity, and dissolved oxygen still shine through the noise when time-based autocorrelation is handled carefully.</p>
+<p>That’s the exciting part: technology doesn’t have to be expensive to be useful. With clever data science, we can make sense of imperfect data and turn it into real environmental insight. As Kermorvant et al.&nbsp;(2023) note, combining high-frequency sensors with advanced models could make water-quality monitoring cheaper, broader, and far more responsive to change.</p>
+<p>In the end, it’s not just about fancy sensors; it’s about smarter systems that let science flow just as freely as our rivers should.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-kermorvant2023" class="csl-entry" role="listitem">
+Kermorvant, C., Liquet, B., Litt, G., Mengersen, K., Peterson, E. E., Hyndman, R. J., Jones, J. B. Jr., &amp; Leigh, C. (2023). Understanding links between water-quality variables and nitrate concentration in freshwater streams using high frequency sensor data. <em>PLOS ONE</em>, <em>18</em>(6), e0287640. <a href="https://doi.org/10.1371/journal.pone.0287640">https://doi.org/10.1371/journal.pone.0287640</a>
+</div>
+</div>
+</section>
+<section id="acknowledgement" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgement">Acknowledgement</h2>
+<p>Parts of this post were developed with guidance from an AI assistant used for formatting, and structuring ideas. All analysis, interpretation, and final writing decisions are my own. <a href="https://chatgpt.com/share/68ea43d0-3aa8-8009-84c8-9071a839903d">AI Chat</a></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1759775400000" data-listing-file-modified-sort="1760182755200" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="713">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\welcome\figure.png" alt="Variable importance across NEON sites"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">Can Cheaper Sensors Save Our Rivers?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">Nitrate might not make the news every day, but it’s a quiet troublemaker in our rivers. Too much of it fuels algal blooms, robs the water of oxygen, and puts fish and other…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Oct 7, 2025
-</div>
-<div class="listing-author">
-Sia Chawla
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

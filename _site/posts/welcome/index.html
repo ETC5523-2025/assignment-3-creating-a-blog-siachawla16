@@ -177,10 +177,10 @@ div.csl-indent {
 </section>
 <section id="digging-into-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="digging-into-the-data">Digging Into the Data</h2>
-<p>To explore whether inexpensive, readily available sensors could track river nitrate levels, researchers used publicly available data from the <strong>National Ecological Observatory Network (NEON)</strong>, as analysed by (Kermorvant et al., 2023) <span class="citation" data-cites="kermorvant2023">(<a href="#ref-kermorvant2023" role="doc-biblioref">Kermorvant et al., 2023</a>)</span>. The study focused on three contrasting river systems: the <strong>Arikaree River</strong> in Colorado’s dry plains, the <strong>Caribou-Poker Creeks</strong> in Alaska’s sub-arctic wilderness, and <strong>Lewis Run</strong> in Virginia’s temperate, partly urban landscape.</p>
-<p>At each site, nitrate concentrations were recorded every 15 minutes using high-grade sensors, while supporting variables—water temperature, dissolved oxygen, turbidity, and specific conductance—were collected even more frequently and synchronised to match the nitrate data.</p>
+<p>To explore whether inexpensive, readily available sensors could track river nitrate levels, researchers used publicly available data from the <strong>National Ecological Observatory Network (NEON)</strong>, as analysed by Kermorvant et al. <span class="citation" data-cites="kermorvant2023">(<a href="#ref-kermorvant2023" role="doc-biblioref">Kermorvant et al., 2023</a>)</span>. The study focused on three contrasting river systems: the <strong>Arikaree River</strong> in Colorado’s dry plains, the <strong>Caribou-Poker Creeks</strong> in Alaska’s subarctic wilderness, and <strong>Lewis Run</strong> in Virginia’s temperate, partly urban landscape.</p>
+<p>At each site, nitrate concentrations were recorded every 15 minutes using high-grade sensors, while supporting variables such as water temperature, dissolved oxygen, turbidity, and specific conductance were collected even more frequently and synchronised to match the nitrate data.</p>
 <p>Instead of relying on a simple regression, the team applied a <strong>Generalised Additive Mixed Model (GAMM)</strong>, enhanced with an <strong>ARIMA correction</strong> to account for daily and seasonal autocorrelation. In everyday terms, the model learned both the “shape” of the data and the natural rhythms of the rivers.</p>
-<p>And the results were striking. Across all three rivers, the model explained about <strong>99 % of the variation</strong> in nitrate levels. Yet, the key drivers differed by site. In <strong>Lewis Run</strong>, specific conductance dominated. In <strong>Caribou-Poker Creeks</strong>, conductance mattered too, though turbidity was almost irrelevant. For the <strong>Arikaree River</strong>, no single sensor told the full story—the biological and diel cycles captured by the ARIMA component carried most of the signal.</p>
+<p>And the results were striking. Across all three rivers, the model explained about <strong>99% of the variation</strong> in nitrate levels. Yet, the key drivers differed by site. In <strong>Lewis Run</strong>, specific conductance dominated. In <strong>Caribou-Poker Creeks</strong>, conductance mattered too, though turbidity was almost irrelevant. For the <strong>Arikaree River</strong>, no single sensor told the full story; the biological and diel cycles captured by the ARIMA component carried most of the signal.</p>
 <div id="fig-importance" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Variable importance across NEON sites">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-importance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -191,7 +191,7 @@ Figure&nbsp;1
 </figcaption>
 </figure>
 </div>
-<p>As seen in <a href="#fig-importance">Figure 1</a>, each river reveals a different “fingerprint” of nitrate behaviour—proof that there’s no universal predictor.</p>
+<p>As seen in <a href="#fig-importance">Figure 1</a>, each river reveals a different fingerprint of nitrate behaviour, proof that there’s no universal predictor.</p>
 <p>To test how much modelling technique mattered, the researchers compared traditional GAMs with the more advanced GAMMs.</p>
 <div id="fig-gamm" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Model comparison between GAM and GAMM across sites">
 <figure class="quarto-float quarto-float-fig figure">
@@ -204,13 +204,13 @@ Figure&nbsp;2
 </figure>
 </div>
 <p>A glance at <a href="#fig-gamm">Figure 2</a> shows why this step was essential. When temporal autocorrelation was ignored, performance suffered. With the ARIMA correction in place, accuracy jumped, capturing the hidden biological and hydrological cycles driving nitrate changes.</p>
-<p>Together, the visuals tell a clear story: while cheap sensors can indeed reveal nitrate dynamics with impressive precision, the signals that matter most vary from site to site. There is no one-size-fits-all solution—but there is a reliable framework: <strong>combine accessible sensor data with smart, adaptive modelling.</strong> That’s how cheaper sensors can, quite literally, help save our rivers.</p>
-<section id="flowing-forward" class="level3">
-<h3 class="anchored" data-anchor-id="flowing-forward">Flowing Forward</h3>
-<p>So, can cheaper sensors really save our rivers? The evidence says maybe not alone, but they sure can help. When paired with smart modeling tools, even low-cost sensors can uncover powerful stories hidden in the data. As seen in <a href="#fig-importance">Figure 1</a>, patterns in temperature, turbidity, and dissolved oxygen still shine through the noise when time-based autocorrelation is handled carefully.</p>
-<p>That’s the exciting part: technology doesn’t have to be expensive to be useful. With clever data science, we can make sense of imperfect data and turn it into real environmental insight. As Kermorvant et al.&nbsp;(2023) <span class="citation" data-cites="kermorvant2023">(<a href="#ref-kermorvant2023" role="doc-biblioref">Kermorvant et al., 2023</a>)</span> note, combining high-frequency sensors with advanced models could make water-quality monitoring cheaper, broader, and far more responsive to change.</p>
-<p>In the end, it’s not just about fancy sensors; it’s about smarter systems that let science flow just as freely as our rivers should.</p>
+<p>Together, the visuals tell a clear story: while cheap sensors can indeed reveal nitrate dynamics with impressive precision, the signals that matter most vary from site to site. There is no one-size-fits-all solution, but there is a reliable framework: <strong>combine accessible sensor data with smart, adaptive modelling.</strong> That’s how cheaper sensors can, quite literally, help save our rivers.</p>
 </section>
+<section id="flowing-forward" class="level2">
+<h2 class="anchored" data-anchor-id="flowing-forward">Flowing Forward</h2>
+<p>So, can cheaper sensors really save our rivers? The evidence says maybe not alone, but they sure can help. When paired with smart modelling tools, even low-cost sensors can uncover powerful stories hidden in the data. As seen in <a href="#fig-importance">Figure 1</a>, patterns in temperature, turbidity, and dissolved oxygen still shine through the noise when time-based autocorrelation is handled carefully.</p>
+<p>That’s the exciting part: technology doesn’t have to be expensive to be useful. With clever data science, we can make sense of imperfect data and turn it into real environmental insight. As Kermorvant et al.&nbsp;(2023) note, combining high-frequency sensors with advanced models could make water-quality monitoring cheaper, broader, and far more responsive to change.</p>
+<p>In the end, it’s not just about fancy sensors; it’s about smarter systems that let science flow just as freely as our rivers should.</p>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>

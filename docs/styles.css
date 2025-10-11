@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+
+:root{
+  --bg:#D5ECD4;
+  --surface:#C3DAC3;
+  --text:#6B6054;
+  --primary:#6B6054;
+  --accent:#A1B0AB;
+  --muted:#929487;
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--primary);
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.3rem; }
+
+
+.navbar, .quarto-title-banner {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+.navbar a, .quarto-title-banner h1 {
+  color: #fff !important;
+  font-weight: 600;
+}
+
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover, a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+
+.btn-primary {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+.btn-primary:hover { background: var(--accent) !important; }
+
+.btn-secondary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #fff !important;
+  font-weight: 600;
+}
+.btn-secondary:hover { background: var(--primary) !important; }
+
+/* about page social buttons */
+.about-links .btn {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border: none !important;
+}
+.about-links .btn:hover {
+  background: var(--accent) !important;
+}
+
+
+.card, .callout, pre, code, .figure {
+  background: var(--surface);
+  border: 1px solid var(--muted);
+  border-radius: 12px;
+  padding: .8em;
+}
+
+
+blockquote {
+  background: var(--surface);
+  border-left: 6px solid var(--primary);
+  padding: .8em 1em;
+  font-style: italic;
+  margin: 1em 0;
+}
+
+
+.content, .page-content {
+  max-width: 960px;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+
+img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
