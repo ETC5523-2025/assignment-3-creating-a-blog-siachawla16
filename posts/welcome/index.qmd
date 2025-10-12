@@ -26,19 +26,20 @@ Instead of relying on a simple regression, the team applied a **Generalised Addi
 
 And the results were striking. Across all three rivers, the model explained about **99% of the variation** in nitrate levels. Yet, the key drivers differed by site. In **Lewis Run**, specific conductance dominated. In **Caribou-Poker Creeks**, conductance mattered too, though turbidity was almost irrelevant. For the **Arikaree River**, no single sensor told the full story; the biological and diel cycles captured by the ARIMA component carried most of the signal.  
 
-::: {#fig-importance}
-![](figure.png){fig-alt="Variable importance across NEON sites"}  
-*Figure 1: Variable importance across three NEON sites. Lewis Run shows strong dependence on specific conductance, while Arikaree and Caribou are shaped by weaker or cyclical influences.*  
-:::
+![Variable importance across three NEON sites. Lewis Run shows strong dependence on specific conductance, while Arikaree and Caribou are shaped by weaker or cyclical influences.](figure.png){#fig-importance fig-alt="Variable importance across NEON sites"}
+
+
+
 
 As seen in [Figure 1](#fig-importance), each river reveals a different fingerprint of nitrate behaviour, proof that there’s no universal predictor.  
 
 To test how much modelling technique mattered, the researchers compared traditional GAMs with the more advanced GAMMs.  
 
-::: {#fig-gamm}
-![](table.png){fig-alt="Model comparison between GAM and GAMM across sites"}  
-*Figure 2: Comparing GAM and GAMM models across sites. Adding an ARIMA component (GAMM) dramatically improves model fit, shown by lower aAIC values.*  
-:::
+
+![Comparing GAM and GAMM models across sites. Adding an ARIMA component (GAMM) dramatically improves model fit, shown by lower aAIC values.](table.png){#fig-gamm fig-alt="Model comparison between GAM and GAMM across sites"}
+
+
+ 
 
 A glance at [Figure 2](#fig-gamm) shows why this step was essential. When temporal autocorrelation was ignored, performance suffered. With the ARIMA correction in place, accuracy jumped, capturing the hidden biological and hydrological cycles driving nitrate changes.  
 

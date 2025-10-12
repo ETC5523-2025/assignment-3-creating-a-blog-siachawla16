@@ -113,4 +113,9 @@ img {
   max-width: 100%;
   height: auto;
 }
-
+.quarto-figure-caption,
+.quarto-table-caption {
+  color: #3f3f3f;
+  font-size: 0.95rem;
+  font-style: italic;
+}
